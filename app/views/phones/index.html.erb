@@ -1,0 +1,19 @@
+<h2>List of Phones</h2>
+
+<table>
+    <tr>
+      <th>Manufacturer</th>
+      <th>Year</th>
+      <th>Battery Life</th>
+      <th>Description</th>
+    </tr>
+
+  <% @phones.each do |phone| %>
+    <tr>
+      <td><%= phone.manufacturer.name %></td>
+      <td><%= phone.year %></td>
+      <td><%= phone.battery_life %></td>
+      <td><%= phone.description %></td>
+    </tr>
+  <% end %>
+</table>

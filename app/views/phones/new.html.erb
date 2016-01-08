@@ -1,0 +1,16 @@
+<h1>Add a new phone</h1>
+  <%= form_for @phone do |f| %>
+    <%= f.label :manufacturer_id %>
+    <%= f.collection_select :manufacturer_id, Manufacturer.all, :id, :name %>
+
+    <%= f.label :year %>
+    <%= f.number_field :year, min: 2003 %>
+
+    <%= f.label :battery_life, "Battery Life" %>
+    <%= f.number_field :battery_life %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.submit 'Create Phone'%>
+  <% end %>
